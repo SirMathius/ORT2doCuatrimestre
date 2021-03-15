@@ -1,0 +1,19 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>160</y><w>100</w><h>60</h></coordinates><panel_attributes>Artista
+--
+- id: int
+- nombre: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>380</y><w>100</w><h>80</h></coordinates><panel_attributes>Cancion
+--
+- id: int
+- nombre: String
+- duracion: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>50</x><y>210</y><w>90</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+- canciones
+m1= *</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>10</y><w>100</w><h>30</h></coordinates><panel_attributes>ORTify</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>50</x><y>30</y><w>70</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+- artistas
+m1=*</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>320</y><w>100</w><h>60</h></coordinates><panel_attributes>Usuario
+--
+- nombre: String
+- estado: ?</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>30</y><w>200</w><h>310</h></coordinates><panel_attributes>lt=&lt;-
+- usuarios
+m1= *</panel_attributes><additional_attributes>180;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>360</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- likes
+m1= 1</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element></diagram>

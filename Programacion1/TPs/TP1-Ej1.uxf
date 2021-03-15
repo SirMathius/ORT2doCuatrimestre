@@ -1,0 +1,30 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>70</y><w>110</w><h>90</h></coordinates><panel_attributes>Usuario
+--
+- id: int
+- nombre: String
+- mail: String
+- becado: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>70</y><w>100</w><h>60</h></coordinates><panel_attributes>Categoria
+--
+- id: int
+- nombre: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>290</y><w>100</w><h>90</h></coordinates><panel_attributes>Curso
+--
+- id: int
+- titulo: String
+- precio: float
+- valoracion: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>320</y><w>100</w><h>30</h></coordinates><panel_attributes>Autor
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>120</y><w>70</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+- cursos
+m1= *</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>320</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- autor
+m1= 1</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>150</y><w>70</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+usuario
+m1=1</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>420</y><w>120</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+--
++ CURSO_INEX
++ USUARIO_INEX
++ YA_SUSCRIPTO
++ ES_AUTOR
++ MAX_BECADOS
++ SUSCRIPTO_OK</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>110</y><w>180</w><h>200</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>160;180;10;10</additional_attributes></element></diagram>
