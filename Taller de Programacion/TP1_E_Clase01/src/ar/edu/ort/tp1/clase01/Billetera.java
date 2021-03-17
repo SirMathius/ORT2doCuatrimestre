@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.clase1;
+package ar.edu.ort.tp1.clase01;
 
 public class Billetera {
 	private float saldo;
