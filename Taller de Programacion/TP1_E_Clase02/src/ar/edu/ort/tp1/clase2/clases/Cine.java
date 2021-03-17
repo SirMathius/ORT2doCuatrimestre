@@ -17,12 +17,52 @@ public class Cine {
 
 	public boolean procesarEntradas(ArrayList<Entrada> entradasAProcesar) {
 		int idx = 0;
-		boolean entradasOk = true;
+		boolean entradasProcesadas = true;
 
-		while (idx < entradasAProcesar.size() && entradasOk) {
-
-			idx++;
+		while (idx < entradasAProcesar.size() && entradasProcesadas) {
+			entradasProcesadas = procesarEntrada(entradasAProcesar.get(idx));
+			idx++; 
 		}
-		return entradasOk;
+		
+		
+		if (entradasProcesadas) {
+			
+			masrcarTodosLosAsientos(entradasAProcesar);
+			
+		}
+		
+		return entradasProcesadas;
+	}
+
+	private void masrcarTodosLosAsientos(ArrayList<Entrada> entradasAProcesar) {
+
+		for (Entrada entrada : entradasAProcesar) {
+			Funcion f = buscarFuncion(entrada.getDia(), entrada.getHoraInicio());
+			f.marcarAsiento(entrada.getFila(), entrada.getLetra());
+		}
+		
+	}
+
+	private boolean procesarEntrada(Entrada entrada) {
+		
+		boolean entradaValida = false;
+		Funcion funcion = buscarFuncion(entrada.getDia(), entrada.getHoraInicio());;
+		
+		return funcion != null && funcion.validarAsiento(entrada.getFila(), entrada.getLetra());
+	}
+
+	private Funcion buscarFuncion(String dia, String horaInicio) {
+		int idx = 0;
+		Funcion buscada = null;
+		while (idx < this.funciones.size() && buscada == null) {
+			if (this.funciones.get(idx).esDiaYHora(dia, horaInicio)) {
+				buscada = this.funciones.get(idx);
+				
+			}
+			idx ++;
+			
+		}
+		
+		return buscada;
 	}
 }

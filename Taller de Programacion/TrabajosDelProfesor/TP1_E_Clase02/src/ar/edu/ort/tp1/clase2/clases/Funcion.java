@@ -3,7 +3,6 @@ package ar.edu.ort.tp1.clase2.clases;
 import java.util.ArrayList;
 
 public class Funcion {
-
 	private String dia;
 	private String horaInicio;
 	private ArrayList<Asiento> asientos;
@@ -11,33 +10,30 @@ public class Funcion {
 	public Funcion(String dia, String horaInicio) {
 		this.dia = dia;
 		this.horaInicio = horaInicio;
-		this.asientos = new ArrayList<Asiento>();
+		this.asientos = new ArrayList<>();
 	}
 
-	public boolean esDiaYHora(String dia, String horaInicio) {
+	public boolean esTuDiaHora(String dia, String horaInicio) {
 
 		return this.dia == dia && this.horaInicio == horaInicio;
 	}
 
 	public boolean validarAsiento(int fila, char letra) {
-
 		Asiento asiento = this.buscarAsiento(fila, letra);
-		
-		return asiento != null && asiento.estaReservadoletra();
+
+		return asiento != null && asiento.estasReservado();
 	}
-	
+
 	private Asiento buscarAsiento(int fila, char letra) {
 		int idx = 0;
 		Asiento buscado = null;
-		while (idx < this.asientos.size() && buscado == null) {
-			if (this.asientos.get(idx).esFilaYLetra(fila, letra)) {
+		while (buscado == null && idx < this.asientos.size()) {
+			if (this.asientos.get(idx).esTuFilaLetra(fila, letra)) {
 				buscado = this.asientos.get(idx);
-				
 			}
-			idx ++;
-			
+			idx++;
 		}
-		
+
 		return buscado;
 	}
 
