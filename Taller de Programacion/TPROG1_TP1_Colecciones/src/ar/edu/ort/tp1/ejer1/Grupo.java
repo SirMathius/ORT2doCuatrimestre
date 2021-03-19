@@ -14,6 +14,7 @@ public class Grupo {
 	public Grupo(String nombre) {
 
 		this.nombre = nombre;
+		this.integrantes = new ArrayList<>();
 	}
 
 	// Metodos
@@ -39,9 +40,9 @@ public class Grupo {
 	public void agregarIntegrante(String nombreIntegrante) {
 
 		if (!buscarRepetido(nombreIntegrante)) {
-			
+
 			integrantes.add(nombreIntegrante);
-			
+
 		}
 
 	}
@@ -49,7 +50,6 @@ public class Grupo {
 	private boolean buscarRepetido(String nombreIntegrante) {
 		int idx = 0;
 		boolean integranteRepetido = false;
-		String integrante;
 
 		while (idx < this.integrantes.size() && integranteRepetido) {
 
@@ -60,25 +60,81 @@ public class Grupo {
 			idx++;
 
 		}
-		
+
 		return integranteRepetido;
 
 	}
-	
+
 	private int obtenerPosicionIntegrante(String nombreIntegrante) {
-		
-		int posicion;
-		
-		
-		
-		
-		return 1;
+
+		int posicion = 0;
+		boolean encontrado = false;
+
+		while (posicion < integrantes.size() && encontrado == false) {
+
+			if (nombreIntegrante == integrantes.get(posicion)) {
+
+				return posicion;
+
+			}
+
+			posicion++;
+		}
+
+		return -1;
 	}
 
-	
-	
-	
-	
-	
-	
+	public String obtenerIntegrante(int posicion) {
+
+		return integrantes.get(posicion);
+	}
+
+	public String buscarIntegrante(String nombre) {
+
+		int idx = 0;
+
+		while (idx < integrantes.size() && nombre != integrantes.get(idx)) {
+
+			if (nombre == integrantes.get(idx)) {
+
+				return integrantes.get(idx);
+			}
+		}
+
+		return null;
+	}
+
+	public String removerIntegrante(String nombreIntegrante) {
+
+		String integrante = this.buscarIntegrante(nombreIntegrante);
+
+		if (integrante != null) {
+			integrantes.remove(integrante);
+
+			return integrante;
+		}
+
+		return null;
+	}
+
+	private void mostrarIntegrantes() {
+
+		int totalIntegrantes = integrantes.size();
+		System.out.println(totalIntegrantes);
+
+		for (String nombre : integrantes) {
+			System.out.println(nombre);
+
+		}
+	}
+
+	public void mostrar() {
+		System.out.println(this.nombre);
+		this.mostrarIntegrantes();
+	}
+
+	public void vaciar() {
+		integrantes.removeAll(integrantes);
+	}
+
 }
