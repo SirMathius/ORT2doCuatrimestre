@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.ejer2;
+package ar.edu.ort.tp1.ejer3;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -44,6 +44,36 @@ public class Carrera {
 
 			}
 
+		}
+		
+	}
+	
+	public void mostarPodio() {
+		
+		this.ordenarPorTiempos();
+		double menorTiempo = Double.MAX_VALUE;
+		
+		for (Atleta atleta : atletas) {
+			if(atleta.getTiempo() < menorTiempo) {
+				menorTiempo = atleta.getTiempo();
+			}
+		}
+		
+		System.out.println("\nPodio: ");
+
+		int idx = 0;
+		int puestos = 1;
+		
+		while (idx < atletas.size() && idx + 1 < atletas.size() && puestos <= 3) {
+			
+			System.out.println("Puesto Nº " + puestos + ": " + atletas.get(idx).getNombre());
+			
+			if (atletas.get(idx + 1).getTiempo() >  atletas.get(idx).getTiempo()) {
+				puestos++;
+			}
+						
+			idx++;
+			
 		}
 		
 	}

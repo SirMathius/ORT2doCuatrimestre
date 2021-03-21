@@ -1,4 +1,4 @@
-package ar.edu.ort.tp1.ejer2;
+package ar.edu.ort.tp1.ejer3;
 
 public class Atleta {
 	
