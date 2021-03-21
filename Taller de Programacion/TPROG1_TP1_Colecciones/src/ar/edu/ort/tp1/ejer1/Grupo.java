@@ -13,7 +13,8 @@ public class Grupo {
 
 	public Grupo(String nombre) {
 
-		this.nombre = nombre;
+		// this.nombre = nombre;
+		this.setNombre(nombre);
 		this.integrantes = new ArrayList<>();
 	}
 
@@ -31,77 +32,77 @@ public class Grupo {
 
 	}
 
-	public int getCantidadIntegrantes(ArrayList<String> integrantes) {
+	public int getCantidadIntegrantes() {
 
-		return integrantes.size();
+		return this.integrantes.size();
 
 	}
+	
+	public void agregarIntegrante(String nuevo) {
+		String integrante = this.buscarIntegrante(nuevo);
 
-	public void agregarIntegrante(String nombreIntegrante) {
+		if (integrante == null) {
 
-		if (!buscarRepetido(nombreIntegrante)) {
+			integrantes.add(nuevo);
+			System.out.println(nuevo + " fue asignado al grupo " + this.nombre);
 
-			integrantes.add(nombreIntegrante);
-
+		} else {
+			System.out.println(nuevo + " ya existe en el grupo " + this.nombre);
 		}
 
 	}
 
-	private boolean buscarRepetido(String nombreIntegrante) {
+	public void agregarIntegrante_ALT1(String nombreIntegrante) {
+
+		if (!this.integrantes.contains(nombreIntegrante)) {
+			integrantes.add(nombreIntegrante);
+		}
+
+	}
+
+	private int obtenerPosicionIntegrante(String nombreIntegrante) {
+
+		int posicion = -1;
 		int idx = 0;
-		boolean integranteRepetido = false;
 
-		while (idx < this.integrantes.size() && integranteRepetido) {
-
-			if (nombreIntegrante == integrantes.get(idx)) {
-				integranteRepetido = true;
+		while (idx < this.integrantes.size() && posicion == -1) {
+			if (this.integrantes.get(idx).equals(nombreIntegrante)) {
+				posicion = idx;
 			}
 
 			idx++;
 
 		}
 
-		return integranteRepetido;
-
+		return posicion;
 	}
 
-	private int obtenerPosicionIntegrante(String nombreIntegrante) {
+	private int obtenerPosicionIntegrante_ALT(String nombreIntegrante) {
 
-		int posicion = 0;
-		boolean encontrado = false;
-
-		while (posicion < integrantes.size() && encontrado == false) {
-
-			if (nombreIntegrante == integrantes.get(posicion)) {
-
-				return posicion;
-
-			}
-
-			posicion++;
-		}
-
-		return -1;
+		return this.integrantes.indexOf(nombreIntegrante);
 	}
 
 	public String obtenerIntegrante(int posicion) {
 
-		return integrantes.get(posicion);
+		return this.integrantes.get(posicion);
 	}
 
 	public String buscarIntegrante(String nombre) {
 
+		String buscado = null;
+
 		int idx = 0;
+		while (idx < this.integrantes.size() && buscado == null) {
 
-		while (idx < integrantes.size() && nombre != integrantes.get(idx)) {
+			if (this.integrantes.get(idx).equals(nombre)) {
 
-			if (nombre == integrantes.get(idx)) {
-
-				return integrantes.get(idx);
+				buscado = this.integrantes.get(idx);
 			}
+
+			idx++;
 		}
 
-		return null;
+		return buscado;
 	}
 
 	public String removerIntegrante(String nombreIntegrante) {
@@ -110,17 +111,20 @@ public class Grupo {
 
 		if (integrante != null) {
 			integrantes.remove(integrante);
-
-			return integrante;
 		}
 
-		return null;
+		return integrante;
+	}
+
+	public String removerIntegrante_ALT(String nombreIntegrante) {
+		int posicion = this.obtenerPosicionIntegrante(nombreIntegrante);
+		return this.integrantes.remove(posicion);
 	}
 
 	private void mostrarIntegrantes() {
 
-		int totalIntegrantes = integrantes.size();
-		System.out.println(totalIntegrantes);
+		int totalIntegrantes = this.getCantidadIntegrantes();
+		System.out.println("Total integrantes: " + totalIntegrantes);
 
 		for (String nombre : integrantes) {
 			System.out.println(nombre);
@@ -129,12 +133,14 @@ public class Grupo {
 	}
 
 	public void mostrar() {
-		System.out.println(this.nombre);
+		System.out.println("\n-------------");
+		System.out.println("Grupo: " + this.nombre);
 		this.mostrarIntegrantes();
+		System.out.println("-------------\n");
 	}
 
 	public void vaciar() {
-		integrantes.removeAll(integrantes);
+		this.integrantes.clear();
 	}
 
 }

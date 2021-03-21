@@ -5,6 +5,6 @@ import java.util.ArrayList;
 public class Carrera {
 
 	private ArrayList<Atleta> atletas;
-	private String especialidad;
+	private Especialidad especialidad;
 	
 }
