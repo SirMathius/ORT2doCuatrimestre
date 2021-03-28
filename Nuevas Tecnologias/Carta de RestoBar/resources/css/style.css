@@ -1,15 +1,16 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
 .menu-container {
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .container-default {
     margin: 0 auto;
     width: 80%;
     overflow: hidden;  
-}
-
-.header-image-container {
-    height: 300px;
 }
 
 img {
@@ -33,19 +34,19 @@ h1 {
 }
 
 .precio {
-    background-image: url(../images/2.jpg);
-    background-position: center center;
+    font-weight: 700;
+    font-size: 25px;
     text-align: center;
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
 }
 
 .precio-texto {
     margin: auto;
 }
 
+.back {
+    background-image: url(../images/Boko_blank.png);
+    background-size: cover;
+}
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -58,11 +59,10 @@ h1 {
 }
 
 .flip-container, .front, .back {
-	width: 470px;
+	width: 400px;
     height: 300px;
     overflow: hidden;
     padding: 0;
-    margin: 10px auto;
 }
 
 /* flip speed goes here */
@@ -92,4 +92,22 @@ h1 {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+    padding: 20px;
+}
+
+
+footer {
+    color: #989898;
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 2rem;
+    font-size: 80%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.descripcion{
+    font-size: 20px;;
 }
