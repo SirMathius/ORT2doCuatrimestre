@@ -10,13 +10,17 @@ public class Poligono {
 		private int y;
 
 		public Coordenada(int x, int y) {
-			this.x = x;
-			this.y = y;
+			actualizarValores(x,y);
 		}
 
 		@Override
 		public String toString() {
 			return "[" + x + ", " + y + "]";
+		}
+		
+		public void actualizarValores(int x, int y) {
+			this.x = x;
+			this.y = y;
 		}
 	}
 
@@ -31,6 +35,10 @@ public class Poligono {
 	public void agregarVertice(int i, int j) {
 		vertices.add(new Coordenada(i, j));
 	}
+	
+	 public int getCantidadDePuntos() {
+		    return vertices.size();
+		  }
 
 	public void mostrar() {
 		System.out.printf("El poligono tiene %d lados, con el centro en %s;\n", getCantidadDePuntos(), centro);
@@ -47,7 +55,8 @@ public class Poligono {
 	}
 
 	public void moverA(int x, int y) {
-		centro.x = x;
-		centro.y = y;
+		this.centro.actualizarValores(x, y);
 	}
+
+	
 }
