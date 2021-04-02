@@ -111,3 +111,15 @@ footer p {
 .descripcion{
     font-size: 20px;;
 }
+
+.descripcion-container {
+    background-color: gray;
+    padding: 20 0;
+}
+
+.iconos {
+    font-size: 350%;
+    display: block;
+    color: #ff9d47;
+    margin-bottom: 10px;
+}
