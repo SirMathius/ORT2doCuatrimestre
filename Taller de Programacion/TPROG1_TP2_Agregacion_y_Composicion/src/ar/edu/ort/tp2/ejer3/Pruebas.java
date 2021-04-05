@@ -23,7 +23,7 @@ public class Pruebas {
 		test.removerTelefono("CELULAR: (+ 54) 4256-0075");
 
 		test.mostrarTodo();
-		
+
 		System.out.println("");
 
 		test.agregarTelefono(new NumeroTelefonico(TipoDeLinea.CELULAR, 54, 4256, 75));
@@ -35,9 +35,9 @@ public class Pruebas {
 		test.mostrarTodo();
 
 		System.out.println("");
-		
+
 		test.borrarTodo();
-		
+
 		test.mostrarTodo();
 
 	}

@@ -9,6 +9,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <link rel="stylesheet" href="resources/css/style.css">
     </head>
 
@@ -42,8 +44,8 @@
             </div>
         </header>
 
-        <main class="container-default">
-            <h1 class="text-center">Menú del Dia</h1>
+        <main class="container-default" id="menu">
+            <h1>Menú del Dia</h1>
             <div class="menu-container row">
                 <div class="flip-container" >
                     <div class="flipper">
@@ -51,7 +53,7 @@
                             <img src="resources/images/1.png" class="card-img-top" alt="plato1Frente">
                         </div>
                         <div class="back">                         
-                            <h2>SUPERBOKO Special</h2>
+                            <h3>SUPERBOKO Special</h3>
                             <p class="descripcion">Un experiencia de sabor que nunca olvidaras</p>
                             <div class="precio">$1500</div>
                         </div>
@@ -63,7 +65,7 @@
                             <img src="resources/images/2.png" class="card-img-top" alt="plato1Frente">
                         </div>
                         <div class="back">                         
-                            <h2>BOKObalde frito</h2>
+                            <h3>BOKO balde frito</h3>
                             <p class="descripcion">Balde de pollo frito con 3 salsas a eleccion</p>
                             <div class="precio">$800</div>
                         </div>
@@ -75,7 +77,7 @@
                             <img src="resources/images/3.png" class="card-img-top" alt="plato1Frente">
                         </div>
                         <div class="back">                         
-                            <h2>BOKO Oriental</h2>
+                            <h3>BOKO Oriental</h3>
                             <p class="descripcion">¿Por qué? no hay porque... Sushi de pollo frito</p>
                             <div class="precio">$1200</div>
                         </div>
@@ -87,109 +89,109 @@
                             <img src="resources/images/4.png" class="card-img-top" alt="plato1Frente">
                         </div>
                         <div class="back">                         
-                            <h2>BOKOBurguer</h2>
+                            <h3>BOKO Burguer</h3>
                             <p class="descripcion">Hamburguesa de pollo frito con salsa teriyaki</p>
                             <div class="precio"><span class="precio-texto">$450</span></div>
                         </div>
                     </div>
                 </div>             
-            </div>
-
-            <section class="descripcion-container row" id="quienesSomos">
-
-                <div class="row">
+            </div>   
+        </main>
+        <section class="descripcion-container gray-background" id="quienesSomos">
+            <div class="container-default">
+                <div class="row container-default">
                     <h2>El mejor pollo del mundo es el BOKOChicken</h2>
                     <p>
                         Desde hace mas de 2 decadas que seguimos consagrados como el mejor restaurante de pollo frito no solo de la nacion sino de todo el mundo!
                     </p>
                 </div>
-                <div class="row ">
-                    <div class="col span-1-of-3 box">
-                        <ion-icon name="fast-food-outline iconos"></ion-icon>
+                <div class="row container-default">
+                    <div class="col-4 descripcion">
+                        <span class="material-icons">fastfood</span>
                         <h3>Comida 100% natural</h3>
                         <p>
                             Nuestros provedores no brindan los ingredientes de la mejor calidad y sin ningun tipo de quimicos ni conservantes.
                         </p>
                     </div>
-                    <div class="col span-1-of-3 box">
-                        <ion-icon name="heart-outline iconos"></ion-icon>
+                    <div class="col-4 descripcion">
+                        <span class="material-icons">favorite_border</span>
                         <h3>La mejor atencion</h3>
                         <p>
                             El mejor servico tanto en nuestros restaurantes como en nuestros 100% eficaz sistema de deliveris.
                         </p>
                     </div>
-                    <div class="col span-1-of-3 box">
-                        <ion-icon name="ear-outline iconos"></ion-icon>
+                    <div class="col-4 descripcion">
+                        <span class="material-icons">recommend</span>
                         <h3>Tu opinion cuenta</h3>
                         <p>
                             Estamos abiertos a cualquier sugerencia u opinion que nos ayude a mejorar y brindarte la mejor experiencia.
                         </p>
                     </div>
-
-            </section>
-            <section clas="sedes" id="sedes">
-                <div class="row">
-                    <h2>Encuentranos en estos lugares</h2>
                 </div>
-                <div class="row js--wp-3">
-                    <div class="col span-1-of-4 box">
-                        <img src="resources/images/lisbon-3.jpg" alt="Lisbon">
-                        <h3>Lanus</h3>
-                        <div>
-                            <ion-icon name="earth-outline"></ion-icon>
-                            Calle falsa 123
-                        </div>
-                        <div class="city-feature">
-                            <ion-icon name="call-outline"></ion-icon>
-                            2122-5646
-                        </div>
+        </section>
+        <section class="sedes container-default" id="sedes">
+            <div class="row">
+                <h2 class="text-center">Encuentranos en estos lugares</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <img src="resources/images/lisbon-3.jpg" alt="Lisbon">
+                    <h3>Lanus</h3>
+                    <div>
+                        <span class="material-icons">public</span>
+                        Calle falsa 123
+                    </div>
+                    <div>
+                        <span class="material-icons">call</span>
+                        2122-5646
+                    </div>
 
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="resources/images/san-francisco.jpg" alt="Lisbon">
+                    <h3>La Boca</h3>
+                    <div>
+                        <span class="material-icons">public</span>
+                        Callecita 135
                     </div>
-                    <div class="col span-1-of-4 box">
-                        <img src="resources/images/san-francisco.jpg" alt="Lisbon">
-                        <h3>Lomas del Mirador</h3>
-                        <div>
-                            <ion-icon name="earth-outline"></ion-icon>
-                            Callesita 135
-                        </div>
-                        <div class="city-feature">
-                            <ion-icon name="call-outline"></ion-icon>
-                            2122-5647
-                        </div>
-                    </div>
-                    <div class="col span-1-of-4 box">
-                        <img src="resources/images/berlin.jpg" alt="Lisbon">
-                        <h3>Necochea</h3>
-                        <div>
-                            <ion-icon name="earth-outline"></ion-icon>
-                            Calle que no es 456
-                        </div>
-                        <div class="city-feature">
-                            <ion-icon name="call-outline"></ion-icon>
-                            2122-5648
-                        </div>
-                    </div>
-                    <div class="col span-1-of-4 box">
-                        <img src="resources/images/london.jpg" alt="Lisbon">
-                        <h3>Mataderos</h3>
-                        <div>
-                            <ion-icon name="earth-outline"></ion-icon>
-                            Calle Trucha 333
-                        </div>
-                        <div class="city-feature">
-                            <ion-icon name="call-outline"></ion-icon>
-                            2122-5649
-                        </div>
+                    <div>
+                        <span class="material-icons">call</span>
+                        2122-5647
                     </div>
                 </div>
-            </section>
-            
-        </main>
+                <div class="col-md-3 col-sm-6">
+                    <img src="resources/images/berlin.jpg" alt="Lisbon">
+                    <h3>Necochea</h3>
+                    <div>
+                        <span class="material-icons">public</span>
+                        Calle que no es 456
+                    </div>
+                    <div>
+                        <span class="material-icons">call</span>
+                        2122-5648
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="resources/images/london.jpg" alt="Lisbon">
+                    <h3>Mataderos</h3>
+                    <div>
+                        <span class="material-icons">public</span>
+                        Calle Trucha 333
+                    </div>
+                    <div>
+                        <span class="material-icons">call</span>
+                        2122-5649
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <span class="material-icons go-up"><a href="#menu">arrow_drop_down_circle</a></span>
 
         <footer>
             <p>&copy; 2021 ORT. Proyecto para NUEVAS TECNOLOG&Iacute;AS. 12E Matias Fernandez </p>
         </footer>
-        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        
     </body>
 
 </html>

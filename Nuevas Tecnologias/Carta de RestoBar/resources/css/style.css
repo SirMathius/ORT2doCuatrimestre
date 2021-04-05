@@ -4,6 +4,7 @@
 }
 
 .menu-container {
+    padding:0 0 35px 0 ;
     justify-content: center;
 }
 
@@ -25,12 +26,53 @@ img {
     margin: auto 0;
 }
 
-main {
-    padding: 20px 0;
+main, section {
+    padding: 50px 0;
+}
+
+
+h1,h2,h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h1 {
-    margin: 30px;
+    margin: 30px 0;
+    word-spacing: 4px;
+}
+
+h2 {
+    margin: 20px 0;
+    word-spacing: 3px;
+}
+
+h3 {
+    margin: 10px 0;
+    word-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+h1::after,h2::after, h3::after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+}
+
+h1::after {
+    width: 150px;
+    margin: 30px auto;
+}
+
+h2::after {
+    width: 150px;
+    margin: 20px auto;
+}
+
+h3::after {
+    width: 150px;
+    margin: 20px auto;
 }
 
 .precio {
@@ -93,8 +135,51 @@ h1 {
 .back {
 	transform: rotateY(180deg);
     padding: 20px;
+    text-align: center;
 }
 
+.back h3 {
+    font-size: 1.75rem;
+}
+
+.back .descripcion{
+    font-size: 20px;
+}
+.gray-background {
+    background-color: #F7F7F7;
+}
+
+
+.descripcion-container .material-icons {
+    font-size: 350%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.descripcion-container h3::after {
+    width: 100px;
+}
+
+
+.descripcion-container .descripcion {
+    text-align: justify;
+    padding: 30px;
+}
+
+.material-icons {   
+    color: #e67e22;
+}
+
+.sedes .material-icons {
+    vertical-align: middle;
+    margin-right: 15px;
+    line-height: 1.5;
+}
+
+.sedes {
+    font-size: 15px;
+}
 
 footer {
     color: #989898;
@@ -108,18 +193,19 @@ footer p {
     margin: 0;
 }
 
-.descripcion{
-    font-size: 20px;;
+.go-up {
+    transform: rotate(180deg);
+    font-size: 3rem;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
 }
 
-.descripcion-container {
-    background-color: gray;
-    padding: 20 0;
+.go-up a {
+    text-decoration: none;
+    color: #e67e22;
 }
 
-.iconos {
-    font-size: 350%;
-    display: block;
-    color: #ff9d47;
-    margin-bottom: 10px;
+.go-up:hover {
+    transform: scale(1.15) rotate(180deg);
 }
