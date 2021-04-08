@@ -2,6 +2,11 @@ package ar.edu.ort.tp1clase5.compo;
 
 public class Auto extends Vehiculo {
 
+	public Auto(String marca, String color) {
+		super(marca, color);
+		System.out.println("constructor Auto");
+	}
+
 	public boolean hacerDrift() {
 		return false;
 	}
@@ -22,6 +27,14 @@ public class Auto extends Vehiculo {
 		}
 
 		super.valorProtegido = 2;
+	}
+
+	public void subirPasajero(Persona p) {
+
+		System.out.println("abrir puerta");
+		super.agregarPasajero(p);
+		System.out.println("Cerramos puerta");
+		System.out.println(atrivDefault);
 	}
 
 }

@@ -5,9 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Vehiculo vehiculo = new Vehiculo();
-		Auto auto = new Auto();
-		Moto moto = new Moto();
+		Vehiculo vehiculo = new Vehiculo("pepe", "pipo");
+		Auto auto = new Auto(null, null);
+		Moto moto = new Moto(null, null);
 
 		vehiculo.conducir();
 		vehiculo.mostrarDatos();
@@ -21,6 +21,10 @@ public class Main {
 		moto.mostrarDatos();
 //		moto.hacerDrift();
 		moto.hacerWillie();
+
+		Vehiculo v = new Vehiculo("pepe", "pipo");
+		v.valorProtegido = 10;
+		v.atrivDefault = "esta como publico";
 	}
 
 }
