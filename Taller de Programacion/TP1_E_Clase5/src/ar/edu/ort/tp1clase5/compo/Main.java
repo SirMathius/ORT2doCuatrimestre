@@ -1,5 +1,9 @@
 package ar.edu.ort.tp1clase5.compo;
 
+import java.util.ArrayList;
+
+import ar.edu.ort.tp1clase5.compo.otro.paquete.Lancha;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -25,6 +29,41 @@ public class Main {
 		Vehiculo v = new Vehiculo("pepe", "pipo");
 		v.valorProtegido = 10;
 		v.atrivDefault = "esta como publico";
+
+		// Casting
+		// UpCasting
+
+		Vehiculo vehiculoAuto = new Auto("marca", false);
+		Vehiculo vehiculoMoto = new Moto("marca", "azul");
+		
+		ArrayList<Vehiculo> misVehiculos = new ArrayList<>();
+		
+		misVehiculos.add(auto);
+		misVehiculos.add(moto);
+		misVehiculos.add(new Lancha("marca", "color"));
+		misVehiculos.add(vehiculoAuto);
+		misVehiculos.add(vehiculoMoto);
+		
+		for (Vehiculo veh : misVehiculos) {
+			veh.mostrarDatos();
+			if(veh instanceof Moto) {
+				((Moto)veh).hacerWillie();
+			}
+		}
+		
+		//DownCasting
+		
+		((Auto)vehiculoAuto).hacerDrift();
+		
+		//ClassCast Exception
+		//((Auto)vehiculoMoto).hacerDrift();
+		
+		
+		((Moto)vehiculoMoto).hacerWillie();
+
+		
+		System.out.println("--------fin---------");
+		
 	}
 
 }

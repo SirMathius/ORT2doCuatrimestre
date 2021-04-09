@@ -24,6 +24,10 @@ public class Vehiculo {
 		System.out.println("constructor de la clase Vehiculo");
 	}
 
+	public Vehiculo(String marca) {
+		this(marca, "Negro");
+	}
+
 	private void unMetodoPrivado() {
 		System.out.println("Soy privado");
 	}

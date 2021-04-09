@@ -8,6 +8,7 @@ public class Moto extends Vehiculo {
 	}
 
 	public boolean hacerWillie() {
+		System.out.println("hago Willie");
 		return true;
 	}
 
