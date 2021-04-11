@@ -1,0 +1,87 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>288</y><w>140</w><h>150</h></coordinates><panel_attributes>/Vehiculo/
+--
+- marca: String
+- color: String
+--
++ arrancar():void
++ ponerBalizas():void
+/+ acelerar(): void/
+/+ frenar(): void/
++ conducir():void
++ verPrecio(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>478</y><w>150</w><h>160</h></coordinates><panel_attributes>Moto
+--
+- tieneSideCar: boolean
+--
++ tieneSideCar(): boolean
++ arrancar(): void
+- extenderPedal(): void
+- pisarPedal(): void
++ acelerar(): void
++ frenar(): void
++ conducirRapido():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>658</y><w>120</w><h>120</h></coordinates><panel_attributes>Auto
+--
+- tieneAA: boolean
+--
++ arrancar(): void
+- ponerLlave(): void
+- girarLlave(): void
++ acelerar(): void
++ conducirRapido():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>478</y><w>120</w><h>90</h></coordinates><panel_attributes>Bici
+--
+- tieneMotor: boolean
+--
++ acelerar(): void
++ frenar(): void
++ conducirRapido():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>808</y><w>140</w><h>70</h></coordinates><panel_attributes>AutoElectrico
+--
+- cantidadBaterias: int
+--
++ arrancar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>428</y><w>280</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;260;30;260;50</additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>428</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>428</y><w>500</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;480;30;480;50</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>768</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>658</y><w>120</w><h>80</h></coordinates><panel_attributes>HybridBici
+--
+
+--
++ arrancar(): void
++ conducirRapido():void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>558</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>288</y><w>200</w><h>100</h></coordinates><panel_attributes>Concesonaria
+--
+
+--
++ arrancarTodosLosVehiculos(): void
++ prenderAire(): void
++ verPrecio(): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>308</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- misVehiculos</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>478</y><w>120</w><h>110</h></coordinates><panel_attributes>/VehiculoAA/
+--
+- tieneAA: boolean
+--
++ activarAA(): void
++ frenar(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>658</y><w>130</w><h>110</h></coordinates><panel_attributes>Camioneta
+--
+
+--
++ arrancar(): void
+- arrancarCamioneta(): void
++ acelerar(): void
++ conducirRapido():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>578</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;50;10;50;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>578</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;90;50;90;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>178</y><w>140</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Conducible
+--
++ conducir():void
++ conducirRapido():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>238</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>178</y><w>110</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Apreciable
+--
++ verPrecio(): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>231</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;40;120;40;120;60</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>231</y><w>170</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>150;10;150;40;10;40;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>178</y><w>110</w><h>70</h></coordinates><panel_attributes>ManagerGeneral
+--
+
+--
++ listaPrecio():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>190</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+- apreciables</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element></diagram>
