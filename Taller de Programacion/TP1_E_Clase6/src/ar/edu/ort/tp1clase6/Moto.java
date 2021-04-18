@@ -7,9 +7,19 @@ public class Moto extends Vehiculo {
 		System.out.println("Constructor Moto");
 	}
 
-	public boolean hacerWillie() {
+	@Override
+	public boolean hacerPirueta() {
 		System.out.println("hago Willie");
 		return true;
 	}
 
+	@Override
+	public void acelerar(int cantidad) {
+		super.acelerar(cantidad);
+		System.out.println("Pero soy una moto");
+	}
+	
+	public void saludarDuenio(String nombreDueño) {
+		System.out.println("hola dueño soy moto");
+	}
 }

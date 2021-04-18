@@ -1,6 +1,6 @@
 package ar.edu.ort.tp1clase6;
 
-public class Vehiculo {
+public abstract class Vehiculo extends SuperVehiculo {
 
 	
 	private String marca;
@@ -22,6 +22,10 @@ public class Vehiculo {
 		this("Generica", "Negro");
 		this.anio = anio;
 	}
+	
+	public void acelerar(int cantidad) {
+		System.out.printf("acelerando la cantidad de %d km/h\n", cantidad);
+	};
 
 	public void conducir() {
 		System.out.println("estoy conduciendo");
@@ -31,5 +35,7 @@ public class Vehiculo {
 		System.out.printf("mi marca es: %s - y mi color es: %s \n", marca, color);
 	}
 
+	public abstract boolean hacerPirueta();
+	 
 
 }
