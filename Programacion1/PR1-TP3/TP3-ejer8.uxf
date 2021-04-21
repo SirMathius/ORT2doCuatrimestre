@@ -1,0 +1,64 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>70</x><y>0</y><w>240</w><h>90</h></coordinates><panel_attributes>EstacionDePeaje
+--
+-id: long
+-descripcion: String
+--
+_+dameHoraActual():int_
++cabinasConEfectivo():ArrayList&lt;Cabina&gt;
++promedioDemora():float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>140</y><w>210</w><h>200</h></coordinates><panel_attributes>Cabina
+--
+_-MIN_H_P_1: int=6_
+_-MIN_H_P_2: int=17_
+_-MAX_H_P_1: int=10_
+_-MAX_H_P_2: int=20_
+_-RECARGO_H_P: float=0,08_
+-id: long
+--
++cobrar(Vehiculo):float
+-esHoraPico():boolean
++medioDePagoEfectivo():boolean
++medioDePagoElectronico():boolean
++getDiasDemora():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>80</y><w>70</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+-cabinas
+m1=*</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>220</y><w>100</w><h>60</h></coordinates><panel_attributes>Vehiculo
+--
+-patente: String
+--
++getImporte():float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>220</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>400</y><w>170</w><h>70</h></coordinates><panel_attributes>/MedioDePago/
+--
+-descripcion: String
+--
+/+obtenerDescuento(): float/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>520</y><w>160</w><h>60</h></coordinates><panel_attributes>Efectivo
+--
+_-DESCUENTO: float=0_
+--
++obtenerDescuento(): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>570</y><w>160</w><h>60</h></coordinates><panel_attributes>SUBE
+--
+_-DESCUENTO: float=0,1_
+--
++obtenerDescuento(): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>570</y><w>160</w><h>100</h></coordinates><panel_attributes>PASE
+--
+_-DESCUENTO: float=0,15_
+_-DESCUENTO_2: float=0,12_
+_-DEMORA: int=5_
+--
++obtenerDescuento(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>400</y><w>120</w><h>60</h></coordinates><panel_attributes>/PagoElectronico/
+--
+-diasDemora: int
+--
++getDiaDemora(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>330</y><w>110</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+-medioDePago
+m1=1</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>420</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>460</y><w>120</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;40;10;40;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>450</y><w>220</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>200;10;200;60;10;60;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>450</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60;20;60;20;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>50</y><w>110</w><h>140</h></coordinates><panel_attributes>&lt;enum&gt;
+Categoria
+--
+_+AUTO(50)_
+_+CAMION(75)_
+_+MOTO(10)_
+-importe: float
+--
+-Categoria(float)
++getImporte():float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>120</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+-medioDePago
+m1=1</panel_attributes><additional_attributes>100;20;10;20;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>80</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>
