@@ -1,0 +1,9 @@
+1-
+a) Casa ES-UN inmueble
+b) Auto TIENE-UN motor
+c) Auto ES-UN vehiculo
+d) Persona TIENE-UN domicilio
+e) Celular TIENE-UNA pantalla
+f) Servidor ES-UNA computadora
+g) Curso TIENE-UNA catedra
+h) Java ES-UN lenguaje

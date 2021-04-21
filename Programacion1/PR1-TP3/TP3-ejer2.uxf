@@ -1,0 +1,32 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>8</y><w>120</w><h>140</h></coordinates><panel_attributes>/Archivo/
+--
+- nombre: String
+- peso: int
+- localizacion: String
+- abierto: boolean
+--
++ abrirse():void
++ cerrarse(): void
++ moverUbicacion(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>188</y><w>150</w><h>100</h></coordinates><panel_attributes>/Multimedia/
+--
+- duracion: int
+- enReproduccio: boolean
+--
++ reproducir(): void
++ parar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>348</y><w>150</w><h>80</h></coordinates><panel_attributes>Audio
+--
+- formato: String
+- artista: String
+- albun: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>348</y><w>150</w><h>80</h></coordinates><panel_attributes>Video
+--
+- formato: String
+- alto: int
+- ancho: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>188</y><w>120</w><h>60</h></coordinates><panel_attributes>Texto
+--
+- codificacion: String
+--
++ crifrar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>278</y><w>270</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50;250;50;250;70</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>278</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>138</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>138</y><w>260</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;240;40;240;50</additional_attributes></element></diagram>

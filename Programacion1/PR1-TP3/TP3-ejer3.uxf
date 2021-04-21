@@ -1,0 +1,65 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>0</y><w>100</w><h>60</h></coordinates><panel_attributes>Mazo
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>130</y><w>100</w><h>60</h></coordinates><panel_attributes>/Carta/
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>50</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-cartas
+m1= 54 </panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>130</y><w>100</w><h>60</h></coordinates><panel_attributes>Joker
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>260</y><w>100</w><h>60</h></coordinates><panel_attributes>/CartaComun/
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>150</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>180</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>260</y><w>160</w><h>100</h></coordinates><panel_attributes>&lt;Enum&gt;
+Palo
+--
+_+TREBOL(Color: NEGRO)_
+_+CORAZON(Color: ROJO)_
+_+PICA(Color: NEGRO)_
+_+DIAMANTE(Color: ROJO)_
+--
++ getColor(): Color</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>260</y><w>70</w><h>80</h></coordinates><panel_attributes>&lt;Enum&gt;
+Color
+--
+_+ROJO_
+_+NEGRO_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>270</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-palo
+m1=1</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>270</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-color
+m1=1</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>600</y><w>120</w><h>60</h></coordinates><panel_attributes>CartaNumero
+--
+- numero: int
+--
++ setNumero(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>430</y><w>120</w><h>60</h></coordinates><panel_attributes>CartaLetra
+--
+- letra: char
+--
++ setNumero(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>311</y><w>30</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;290</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>311</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90;90;90;90;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>430</y><w>70</w><h>110</h></coordinates><panel_attributes>&lt;Enum&gt;
+LetraCarta
+--
+_+A_
+_+J_
+_+Q_
+_+K_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>440</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-letra
+m1=1</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>570</y><w>90</w><h>180</h></coordinates><panel_attributes>&lt;Enum&gt;
+NumeroCarta
+--
+_+2_
+_+3_
+_+4_
+_+5_
+_+6_
+_+7_
+_+8_
+_+9_
+_+10_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>610</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-numero
+m1=1</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element></diagram>
