@@ -16,7 +16,7 @@ public class Vendedor extends SubContratado {
 	}
 
 	public String toString() {
-		return "Vendedor " + this.getNombre() + " gana: " + this.calcularPago();
+		return this.getNombre() + " gana: " + this.calcularPago();
 
 	}
 
