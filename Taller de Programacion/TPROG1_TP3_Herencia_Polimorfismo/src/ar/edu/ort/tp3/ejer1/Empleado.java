@@ -1,6 +1,6 @@
 package ar.edu.ort.tp3.ejer1;
 
-public class Empleado {
+public abstract class Empleado {
 
 	private String nombre;
 	private int edad;
@@ -19,7 +19,7 @@ public class Empleado {
 		return this.nombre;
 	}
 
-	public void setNombre(String nombre) {
+	private void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
@@ -27,7 +27,7 @@ public class Empleado {
 		return this.edad;
 	}
 
-	public void setEdad(int edad) {
+	private void setEdad(int edad) {
 		this.edad = edad;
 	}
 
@@ -35,8 +35,5 @@ public class Empleado {
 		return "[Nombre=" + nombre + ", edad=" + edad + "]";
 	}
 
-	public float calcularPago() {
-		return 0.0f;
-	}
-
+	public abstract float calcularPago();
 }

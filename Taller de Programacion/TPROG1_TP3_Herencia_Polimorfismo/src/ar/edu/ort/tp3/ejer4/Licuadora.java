@@ -1,19 +1,18 @@
 package ar.edu.ort.tp3.ejer4;
 
 public class Licuadora extends Electrodomestico {
-	
 
-	//s la potencia (en watts) y la cantidad de velocidades.
+	// s la potencia (en watts) y la cantidad de velocidades.
 	private int potencia;
 	private int cantVelocidades;
-	
+
 	public Licuadora(String tipo, String marca, String modelo, int numSerie, int voltaje, boolean encendido,
 			float precio, int potencia, int cantVelocidades) {
 		super(tipo, marca, modelo, numSerie, voltaje, encendido, precio);
-		
+
 		this.setPotencia(potencia);
 		this.setCantVelocidades(cantVelocidades);
-		
+
 	}
 
 	private void setPotencia(int potencia) {
@@ -28,7 +27,10 @@ public class Licuadora extends Electrodomestico {
 	public String toString() {
 		return "Licuadora [potencia=" + potencia + ", cantVelocidades=" + cantVelocidades + "]";
 	}
-	
-	
-	
+
+	@Override
+	public void imprimir() {
+		System.out.println(this.toString());
+	}
+
 }

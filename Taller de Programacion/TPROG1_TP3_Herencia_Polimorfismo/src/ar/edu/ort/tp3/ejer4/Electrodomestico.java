@@ -1,6 +1,6 @@
 package ar.edu.ort.tp3.ejer4;
 
-public abstract class Electrodomestico {
+public abstract class Electrodomestico implements Imprimible {
 
 	//se conoce la marca, el modelo, el número de serie, el voltaje, el estado
 	//(encendido/apagado) y el precio

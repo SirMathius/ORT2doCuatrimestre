@@ -34,12 +34,15 @@ public class Televisor extends Electrodomestico {
 
 	@Override
 	public String toString() {
-		//Televisor smart Philips 49 pulgadas, modelo 49PGFS: $14370.
+		// Televisor smart Philips 49 pulgadas, modelo 49PGFS: $14370.
 
-		return "Televisor "+this.esSmart()+" "+this.getMarca()+" " + dimensionPulgadas + " pulgadas, modelo "+ this.getModelo()+": $"+this.getPrecio();
+		return "Televisor " + this.esSmart() + " " + this.getMarca() + " " + dimensionPulgadas + " pulgadas, modelo "
+				+ this.getModelo() + ": $" + this.getPrecio();
 	}
-	
-	
 
+	@Override
+	public void imprimir() {
+		System.out.println(this.toString());
+	}
 
 }
