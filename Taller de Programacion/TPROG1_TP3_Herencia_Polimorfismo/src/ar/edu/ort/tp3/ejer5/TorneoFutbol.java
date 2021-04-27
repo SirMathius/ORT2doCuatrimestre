@@ -56,9 +56,9 @@ public abstract class TorneoFutbol {
 		
 		if(golesEquipoLocal > golesEquipoVisitante)//Si gana el local
 		{
-			// Completar
+			puntosLocal = puntosLocal+ 3;
 			
-			} else {//Si gana el visitante
+			} else if(){//Si gana el visitante
 
 				// Completar
 			}

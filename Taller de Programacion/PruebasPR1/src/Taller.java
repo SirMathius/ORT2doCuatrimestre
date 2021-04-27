@@ -45,8 +45,8 @@ public class Taller {
 		boolean ok = false;
 		
 		if(bicicleta instanceof BicicletaElec) {			
-			BicicletaElec b = (BicicletaElec) bicicleta;
-			ok = b.getWattsPotencia() <= MAX_POTENCIA && b.getCantKilometros() < MAX_KILOMETROS;
+		//	BicicletaElec b = (BicicletaElec) bicicleta;
+		//	ok = b.getWattsPotencia() <= MAX_POTENCIA && b.getCantKilometros() < MAX_KILOMETROS;
 			
 			ok= ((BicicletaElec)bicicleta).getWattsPotencia() <= MAX_POTENCIA 
 					&& (bicicleta).getCantKilometros() <= MAX_KILOMETROS;
