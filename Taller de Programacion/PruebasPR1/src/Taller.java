@@ -57,6 +57,5 @@ public class Taller {
 		
 		return ok;
 	}
-
-
 }
+	

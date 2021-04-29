@@ -10,6 +10,12 @@ public class GrupoDeFiguras {
 	}
 	
 	public void mostrarInfoDeFiguras() {
-		// TODO
+
+	for (Figura figura : figuras) {
+		System.out.println("Color de la figura: " + figura.getColor());
+		System.out.println("Perimoetro de la figura: " + figura.perimetro());
+		System.out.println("Area de la figura: " + figura.area());
+	}
+	
 	}
 }
