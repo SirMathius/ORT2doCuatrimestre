@@ -11,12 +11,12 @@ public class Conejo extends Mascota {
 
 	@Override
 	public void comer(double comida) {
-		
+		super.comer(comida, MULT_ALIMENTACION);
 	}
 
 	@Override
 	public void defecar() {
-		// TODO Auto-generated method stub
-		
+		this.actualizarPeso(PORC_DESC_PESO);
+		System.out.println("Ya fui al baño, toma mis pequeñas cosas\r\n" + "");
 	}
 }

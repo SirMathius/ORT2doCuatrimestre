@@ -3,30 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="resources/js/script.js"></script>
 </head>
 <body>
 
-    <form>
+    <form id="form">
         <h3>Registrese:</h3>
-        <input type="text" placeholder="Nombre:" name="nombre" id="nombre">
+        <input type="text" placeholder="Nombre:" name="nombre" id="nombre" required>
         <br>
         <input type="text" placeholder="Apellido:" name="apellido" id="apellido">
         <br>
 
         <label for="hombre">Hombre</label>
-        <input type="radio" name="Sexo" value="hombre" id="hombre">
+        <input type="radio" name="Sexo" value="hombre" id="hombre" required>
 
         <label for="mujer">Mujer</label>
-        <input type="radio" name="Sexo" value="mujer" id="mujer">
+        <input type="radio" name="Sexo" value="mujer" id="mujer" required>
     
-        <label for="otro">Otro</label>
-        <input type="radio" name="Sexo" value="otro" id="otro">
         <br>
 
-        <input type="text" placeholder="Mail:" name="abd@xyz.com" id="mail">
+        <input type="email" name="Mail" placeholder="abd@xyz.com" id="mail" required>
         
-        <input type="text" placeholder="Contraseña" name="contraseña" id="contraseña">
+        <input type="text" placeholder="Contraseña" name="contraseña" id="contraseña" required>
         <br>
         <label for="nacimiento">Nacimiento</label>
         <select name="dia" id="dia">

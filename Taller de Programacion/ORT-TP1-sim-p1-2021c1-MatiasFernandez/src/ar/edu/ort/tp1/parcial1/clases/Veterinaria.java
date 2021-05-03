@@ -9,7 +9,7 @@ public class Veterinaria implements Mostrable {
 	private String nombre;
 	private Doctor doctor;
 	private ArrayList<Mascota> animalesIngresados;
-	
+
 	public Veterinaria(String nombre, Doctor doctor) {
 		this.doctor = doctor;
 		this.nombre = nombre;
@@ -18,6 +18,7 @@ public class Veterinaria implements Mostrable {
 
 	public void admitirMascota(Mascota mascota) {
 		this.animalesIngresados.add(mascota);
+		System.out.printf(TXT_INGRESO, mascota.getNombre());
 	}
 
 	public Mascota buscarMascota(String nombreDeMascota) {
@@ -28,7 +29,7 @@ public class Veterinaria implements Mostrable {
 			if (animalesIngresados.get(index).getNombre().equals(nombreDeMascota)) {
 				mascotaBuscada = animalesIngresados.get(index);
 				encontrado = true;
-			}else {
+			} else {
 				index++;
 			}
 		}
@@ -36,13 +37,42 @@ public class Veterinaria implements Mostrable {
 	}
 
 	public void vacunar() {
-		// TODO A completar
+		int mascotasVacunadas = 0;
+		for (Mascota mascota : animalesIngresados) {
+			if (!mascota.estaVacunada()) {
+
+				mascotasVacunadas++;
+
+			}
+		}
+		System.out.println("Vacunas aplicadas: " + mascotasVacunadas);
 	}
 
 	@Override
 	public void mostrar() {
-		// TODO Auto-generated method stub
-		
+		/*
+		 * Veterinaria: Cuidamos tu mascota Doctor de Turno: Veterinovich Han sido
+		 * ingresados: 2 conejos, 3 gatos y 3 perros
+		 */
+		int conejos = 0;
+		int gatos = 0;
+		int perros = 0;
+
+		for (Mascota mascota : animalesIngresados) {
+			if (mascota instanceof Gato) {
+				gatos++;
+
+			} else if (mascota instanceof Perro) {
+				perros++;
+
+			} else {
+				conejos++;
+			}
+		}
+
+		System.out.println("Veterinaria: " + this.nombre);
+		System.out.println("Doctor de turno: " + this.doctor.getNombre());
+		System.out.printf(TXT_CANTIDADES, conejos, gatos, perros);
 	}
 
 }
