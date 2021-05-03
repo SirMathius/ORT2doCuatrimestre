@@ -1,0 +1,54 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>60</x><y>10</y><w>280</w><h>70</h></coordinates><panel_attributes>Sophie
+--
+
+--
++programasPorDebajoDe(int): ArrayLis&lt;Programa&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>150</y><w>230</w><h>170</h></coordinates><panel_attributes>Programa
+--
+-id :int
+-nombre: String
+-nombreResponsable: String
+-pruebasUnitariasPasadas: boolean
+--
++indiceCalidad(): double
++mostrarDetalleDeMetodo(String): void
+- buscarMetodo(String): Metodo
++listadoFuentesMayoresAlPromedio(int): ArrayList&lt;Programa&gt;
+-promedioDeFuentes(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>150</y><w>100</w><h>80</h></coordinates><panel_attributes>/Fuente/
+--
+-nombre: String
+-ubicacion: Path
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>220</y><w>190</w><h>90</h></coordinates><panel_attributes>LenguajeDeProgramacion
+--
+
+--
++indiceCalidad(): double
++buscarMetodo(String): Metodo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>70</y><w>180</w><h>90</h></coordinates><panel_attributes>LenguajeDeMarcado
+--
+_-DIVISION_CALIDAD: int = 450_
+-tamañoDeArchivo: String
+--
++indiceCalidad(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>140</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-fuente
+m1=*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>170</y><w>170</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;10;80;60;150;60</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>70</y><w>170</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;80;110;80;10;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>490</y><w>200</w><h>190</h></coordinates><panel_attributes>Metodo
+--
+_-DIVIDENDO_CALIDAD: int=5_
+_-SUMADO_1: int=1_
+_-SUMADO_3: int=3_
+_-SUMADO_20: int=20_
+-nombre: String
+-cantidadParámetros: int
+-cantidadInstrucciones: int
+-cantidadRamificaciones: int
+--
++indiceCalidad(): double
++mostrarDatos(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>300</y><w>170</w><h>230</h></coordinates><panel_attributes>lt=&lt;-
+-metodos
+m1=*</panel_attributes><additional_attributes>10;200;150;200;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>70</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+-programas
+m1=*</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>390</y><w>100</w><h>80</h></coordinates><panel_attributes>&lt;&lt;interfase&gt;&gt;
+Calificable
+--
+
+--
+/+indiceCalidad(): double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>310</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>460</y><w>280</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;80;260;80</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>310</y><w>170</w><h>220</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>150;200;10;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>200</y><w>310</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;210;180;210;180;10;290;10</additional_attributes></element></diagram>
