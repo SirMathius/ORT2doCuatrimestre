@@ -209,3 +209,31 @@ footer p {
 .go-up:hover {
     transform: scale(1.15) rotate(180deg);
 }
+
+.form-section{
+    background-image: url(../images/form_image.png);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.form-section h2::after {
+    display: none;
+}
+
+/*/*formulario
+
+
+.formulario {
+    width: 400px;
+    background: #e67e22;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: Calibri;
+    color: white
+}
+
+.formulario, input{
+    padding: 5px;
+    margin: 10px;
+}*/

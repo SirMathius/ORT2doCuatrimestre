@@ -12,6 +12,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="resources/css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="resources/js/script.js"></script>
     </head>
 
     <body class="container-fluid">
@@ -36,7 +39,9 @@
                                 </li>
                             </ul>
                             <div class="header-button-container">
-                                <button class="btn btn-light">Nueva cuenta</button>
+                                <a href="#formulario">
+                                    <button class="btn btn-light">Nueva cuenta</button>
+                                </a>
                                 <button class="btn btn-outline-light">Ingresar</button>
                             </div>
                         </div>              
@@ -184,6 +189,68 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="form-section " id="formulario">
+            <div class="row container-default">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body bg-light ">
+                        <h2>Regístrate</h2>
+                        <p>Crea tu cuenta para realizar tu pedido!</p>
+                        <form method="post" id="form">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre: <sup>*</sup></label>
+                                <input type="text" name="nombre" class="form-control form-control-lg">
+                                <span class="invalid-feedback">Ingrese su nombre</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido: <sup>*</sup></label>
+                                <input type="text" name="apellido" class="form-control form-control-lg">
+                                <span class="invalid-feedback">Ingrese su apellido</span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label d-block">Sexo: <sup>*</sup></label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="Hombre" value="H" required>
+                                    <label class="form-check-label" for="Hombre">Hombre</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="Mujer" value="M" required>
+                                    <label class="form-check-label" for="Mujer">Mujer</label>
+                                </div>
+                            </div>                          
+                            <div class="mb-3">
+                                <label for="nacimiento" class="form-label">Fecha de nacimiento: <sup>*</sup></label>
+                                <input id="nacimiento" type="date" name="nacimiento" class="form-control form-control-lg" >
+                                <span class="invalid-feedback">Seleccione su fecha de nacimiento</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email: <sup>*</sup></label>
+                                <input type="email" name="email" class="form-control form-control-lg" >
+                                <span class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña: <sup>*</sup></label>
+                                <input type="password" name="password" class="form-control form-control-lg" >
+                                <span class="invalid-feedback">Ingrese su contraseña</span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirm_password" class="form-label">Repite la Contraseña: <sup>*</sup></label>
+                                <input type="password" name="confirm_password" class="form-control form-control-lg" >
+                                <span class="invalid-feedback">Repita la contraseña</span>
+                                <span class="invalid-feedback password-match">Las contraseñas no coinciden</span>
+                            </div>
+                            <div class="mt-3 mb-3 form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="tyc" value="acepto" required>
+                                <label class="form-check-label" for="tyc">He leído y acepto los Términos y Condiciones</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-warning">Enviar</button>
+                            </div>                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <span class="material-icons go-up"><a href="#menu">arrow_drop_down_circle</a></span>
