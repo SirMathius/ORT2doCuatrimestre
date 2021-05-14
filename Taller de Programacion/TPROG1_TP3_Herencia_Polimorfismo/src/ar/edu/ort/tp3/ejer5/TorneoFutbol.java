@@ -54,18 +54,20 @@ public abstract class TorneoFutbol {
 		int golesEquipoLocal 		= partido.getGolesEquipoLocal();
 		int golesEquipoVisitante 	= partido.getGolesEquipoVisitante();
 		
-		if(golesEquipoLocal > golesEquipoVisitante)//Si gana el local
+/*		if(golesEquipoLocal > golesEquipoVisitante)//Si gana el local
 		{
 			puntosLocal = puntosLocal+ 3;
 			
 			} else if(){//Si gana el visitante
 
 				// Completar
-			}
+	
+			}*/
 		}
 
 	// Completar
 	
+
 	
 	public int puntajePartidoEmpatado() {
 		return 1;

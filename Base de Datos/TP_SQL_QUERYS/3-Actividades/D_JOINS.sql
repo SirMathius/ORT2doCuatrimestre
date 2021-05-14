@@ -1,0 +1,136 @@
+/*
+1. Listar el Titulo, fecha de Préstamo y la fecha de Devolución de los Libros prestados
+*/
+
+SELECT TITULO, F_PREST, F_DEVOL
+FROM LIBRO 
+INNER JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO;
+
+/*
+2. Listar el Nro de Libro, Titulo, fecha de Préstamo y la fecha de Devolución de los Libros
+prestados
+*/
+
+SELECT LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.F_PREST, PRESTAMO.F_DEVOL
+FROM LIBRO
+INNER JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO;
+
+/*
+3. Listar el número de lector, su nombre y la cantidad de préstamos realizados a ese
+lector.
+*/
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, COUNT(PRESTAMO.NRO_LECTOR) AS CANTIDAD_PRESTAMOS
+FROM LECTOR
+INNER JOIN PRESTAMO ON LECTOR.NRO_LECTOR = PRESTAMO.NRO_LECTOR
+GROUP BY LECTOR.NRO_LECTOR, LECTOR.NOMBRE;
+
+/*
+4. Listar el número de libro, el título, el número de copia, y la cantidad de préstamos
+realizados para cada copia de cada libro.
+*/
+
+SELECT LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.NRO_COPIA, COUNT(PRESTAMO.NRO_LIBRO) AS CANTIDAD_PRESTAMOS
+FROM LIBRO
+INNER JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO
+GROUP BY LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.NRO_COPIA;
+
+/*
+5. Listar el número de libro, el título, y la cantidad de préstamos realizados para ese libro
+a partir del año 2012
+*/
+
+SELECT LIBRO.NRO_LIBRO, LIBRO.TITULO, COUNT(PRESTAMO.NRO_LIBRO) AS CANTIDAD_PRESTAMOS
+FROM LIBRO
+LEFT JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO AND PRESTAMO.F_PREST > '2012-01-01' 
+GROUP BY LIBRO.NRO_LIBRO, LIBRO.TITULO;
+
+/*
+6. Listar el número de libro, el título, el número de copia, y la cantidad de préstamos
+realizados para cada copia de cada libro, pero sólo para aquellas copias que se hayan
+prestado más de 1 vez.
+*/
+
+SELECT LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.NRO_COPIA, COUNT(PRESTAMO.NRO_LIBRO) AS CANTIDAD_PRESTAMOS
+FROM LIBRO
+INNER JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO
+GROUP BY LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.NRO_COPIA
+HAVING COUNT(PRESTAMO.NRO_LIBRO) > 1;
+
+/*
+7. Listar el Nro de Libro, Titulo, nro de Copia y Fecha de Préstamo, de todas las Copias,
+hayan sido prestadas o no
+*/
+
+SELECT LIBRO.NRO_LIBRO, LIBRO.TITULO, COPIAS.NRO_COPIA, PRESTAMO.F_PREST
+FROM LIBRO
+INNER JOIN COPIAS ON LIBRO.NRO_LIBRO = COPIAS.NRO_LIBRO
+LEFT JOIN PRESTAMO ON LIBRO.NRO_LIBRO = PRESTAMO.NRO_LIBRO AND COPIAS.NRO_COPIA = PRESTAMO.NRO_COPIA;
+
+/*
+8. Listar Nro de Lector, Nombre, nro de Libro, Titulo, Descripción del Tipo de Libro , fecha
+de préstamo que aquellos Prestamos que hayan sido devueltos y el tipo de Libro sea
+Novela o Cuentos
+*/ 
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, LIBRO.NRO_LIBRO, LIBRO.TITULO, TIPOLIBRO.DESCTIPO, PRESTAMO.F_PREST
+FROM PRESTAMO
+INNER JOIN LECTOR ON PRESTAMO.NRO_LECTOR = LECTOR.NRO_LECTOR
+INNER JOIN LIBRO ON PRESTAMO.NRO_LIBRO = LIBRO.NRO_LIBRO
+INNER JOIN TIPOLIBRO ON LIBRO.TIPO = TIPOLIBRO.TIPO
+WHERE PRESTAMO.F_DEVOL IS NOT NULL
+AND TIPOLIBRO.TIPO IN ('no', 'cu');
+
+/*
+9. Obtener la lista de los títulos de los libros prestados y los nombres de los lectores que
+los tienen en préstamo
+*/
+
+SELECT LIBRO.TITULO, LECTOR.NOMBRE
+FROM PRESTAMO
+INNER JOIN LECTOR ON PRESTAMO.NRO_LECTOR = LECTOR.NRO_LECTOR
+INNER JOIN LIBRO ON PRESTAMO.NRO_LIBRO = LIBRO.NRO_LIBRO
+WHERE PRESTAMO.F_DEVOL IS NULL;
+
+/*
+10. Listar el Nro de Lector, Nombre y fecha de Préstamo de aquellos Lectores que hayan
+realizado un préstamo y no lo hayan devuelto
+*/
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, PRESTAMO.F_PREST
+FROM PRESTAMO
+INNER JOIN LECTOR ON PRESTAMO.NRO_LECTOR = LECTOR.NRO_LECTOR
+WHERE PRESTAMO.F_DEVOL IS NULL;
+
+/*
+11. Listar Nro de Lector, Nombre, nro de Libro, Titulo, fecha de préstamo que aquellos
+Prestamos que hayan sido devueltos
+*/
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.F_PREST
+FROM PRESTAMO
+INNER JOIN LECTOR ON PRESTAMO.NRO_LECTOR = LECTOR.NRO_LECTOR
+INNER JOIN LIBRO ON PRESTAMO.NRO_LIBRO = LIBRO.NRO_LIBRO
+WHERE PRESTAMO.F_DEVOL IS NOT NULL;
+
+/*
+12. Listar Nro de Lector, Nombre, nro de Libro, Titulo, fecha de préstamo que aquellos
+Prestamos que hayan sido devueltos y el tipo de Libro sea Novela o Cuentos
+*/
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, LIBRO.NRO_LIBRO, LIBRO.TITULO, PRESTAMO.F_PREST
+FROM PRESTAMO
+INNER JOIN LECTOR ON PRESTAMO.NRO_LECTOR = LECTOR.NRO_LECTOR
+INNER JOIN LIBRO ON PRESTAMO.NRO_LIBRO = LIBRO.NRO_LIBRO
+INNER JOIN TIPOLIBRO ON LIBRO.TIPO = TIPOLIBRO.TIPO
+WHERE PRESTAMO.F_DEVOL IS NOT NULL
+AND TIPOLIBRO.TIPO IN ('No', 'Cu');
+
+/*
+13. Listar el Nro de Lector, Nombre y fecha de Préstamo de Todos los Lectores, hayan
+tenido Prestamos o no
+*/
+
+SELECT LECTOR.NRO_LECTOR, LECTOR.NOMBRE, PRESTAMO.F_PREST
+FROM LECTOR
+LEFT JOIN PRESTAMO ON LECTOR.NRO_LECTOR = PRESTAMO.NRO_LECTOR;

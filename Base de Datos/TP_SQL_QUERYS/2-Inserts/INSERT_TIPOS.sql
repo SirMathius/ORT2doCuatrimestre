@@ -1,0 +1,13 @@
+--Tipo Libro
+
+--
+INSERT INTO TIPOLIBRO VALUES
+('cu', 'Cuentos')
+INSERT INTO TIPOLIBRO VALUES
+('di', 'Diccionario')
+INSERT INTO TIPOLIBRO VALUES
+('es',  'Estudio')
+INSERT INTO TIPOLIBRO VALUES
+('ju', 'Juegos')
+INSERT INTO TIPOLIBRO VALUES
+('no', 'Novela')

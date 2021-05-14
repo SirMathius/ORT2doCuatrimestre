@@ -1,0 +1,51 @@
+/*
+1. Obtener los cinco primeros caracteres de los nombres de todos los lectores de libros
+*/
+
+SELECT SUBSTRING (NOMBRE, 1, 5) AS SHORT
+FROM LECTOR ;
+
+
+/*
+2. Listar los nombres y la dirección de los lectores que tienen libros a préstamo (usar
+subconsultas)
+*/
+
+SELECT NOMBRE, DIRECCION
+FROM LECTOR
+WHERE NRO_LECTOR = ANY(SELECT NRO_LECTOR FROM PRESTAMO WHERE F_DEVOL IS NULL);
+
+/*
+3. Listar el número, título y precio actual del libro que tenga el máximo precio original.
+*/
+
+SELECT NRO_LIBRO, TITULO, PRECIO_ACT
+FROM LIBRO
+WHERE PRECIO_ORI = (SELECT MAX(PRECIO_ORI) FROM LIBRO);
+
+/*
+4. Listar el número, título y precio original de aquellos libros cuyos precios originales sean
+más altos que el promedio de precios actuales de todos los libros.
+*/
+
+SELECT NRO_LIBRO, TITULO, PRECIO_ORI
+FROM LIBRO 
+WHERE PRECIO_ORI > (SELECT AVG(PRECIO_ACT) AS PROMEDIO_ACT FROM LIBRO);
+
+/*
+5. Listar los números, títulos y precios originales de aquellos libros cuyos precios
+originales sean mayores que todos y cada uno de los precios originales de las novelas.
+*/
+
+SELECT NRO_LIBRO, TITULO, PRECIO_ORI
+FROM LIBRO
+WHERE PRECIO_ORI > (SELECT MAX(PRECIO_ORI) AS MAXIMO_ORI FROM LIBRO WHERE TIPO = 'no');
+
+/*
+6. Listar los números, títulos y precios originales de aquellos libros cuyos precios
+originales sean mayores que alguno cualquiera de los precios originales de las novelas
+*/
+
+SELECT NRO_LIBRO, TITULO, PRECIO_ORI
+FROM LIBRO
+WHERE  PRECIO_ORI > ANY (SELECT PRECIO_ORI AS MAXIMO_ORI FROM LIBRO WHERE TIPO = 'no');
