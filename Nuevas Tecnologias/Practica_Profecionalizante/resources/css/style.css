@@ -1,0 +1,239 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    padding:0 0 35px 0 ;
+    justify-content: center;
+}
+
+.container-default {
+    margin: 0 auto;
+    width: 80%;
+    overflow: hidden;  
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/** NAV **/
+.navbar-toggler {
+    text-align: left;
+    padding: 0;
+    margin: auto 0;
+}
+
+main, section {
+    padding: 50px 0;
+}
+
+
+h1,h2,h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 30px 0;
+    word-spacing: 4px;
+}
+
+h2 {
+    margin: 20px 0;
+    word-spacing: 3px;
+}
+
+h3 {
+    margin: 10px 0;
+    word-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+h1::after,h2::after, h3::after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+}
+
+h1::after {
+    width: 150px;
+    margin: 30px auto;
+}
+
+h2::after {
+    width: 150px;
+    margin: 20px auto;
+}
+
+h3::after {
+    width: 150px;
+    margin: 20px auto;
+}
+
+.precio {
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+
+.precio-texto {
+    margin: auto;
+}
+
+.back {
+    background-image: url(../images/Boko_blank.png);
+    background-size: cover;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 400px;
+    height: 300px;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+}
+
+.back h3 {
+    font-size: 1.75rem;
+}
+
+.back .descripcion{
+    font-size: 20px;
+}
+.gray-background {
+    background-color: #F7F7F7;
+}
+
+
+.descripcion-container .material-icons {
+    font-size: 350%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.descripcion-container h3::after {
+    width: 100px;
+}
+
+
+.descripcion-container .descripcion {
+    text-align: justify;
+    padding: 30px;
+}
+
+.material-icons {   
+    color: #e67e22;
+}
+
+.sedes .material-icons {
+    vertical-align: middle;
+    margin-right: 15px;
+    line-height: 1.5;
+}
+
+.sedes {
+    font-size: 15px;
+}
+
+footer {
+    color: #989898;
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 2rem;
+    font-size: 80%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.go-up {
+    transform: rotate(180deg);
+    font-size: 3rem;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+.go-up a {
+    text-decoration: none;
+    color: #e67e22;
+}
+
+.go-up:hover {
+    transform: scale(1.15) rotate(180deg);
+}
+
+.form-section{
+    background-image: url(../images/form_image.png);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.form-section h2::after {
+    display: none;
+}
+
+/*/*formulario
+
+
+.formulario {
+    width: 400px;
+    background: #e67e22;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: Calibri;
+    color: white
+}
+
+.formulario, input{
+    padding: 5px;
+    margin: 10px;
+}*/
