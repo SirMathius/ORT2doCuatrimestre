@@ -11,6 +11,8 @@ public class EjExeptions2 {
 			System.out.println(p1);
 		} catch (RuntimeException re) {
 			System.out.println("Hubo un error: " + re.getMessage());
+		} finally {
+			System.out.println("se ejecuta siempre!");
 		}
 
 		Persona p2;
