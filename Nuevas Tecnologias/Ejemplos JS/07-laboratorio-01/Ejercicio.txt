@@ -1,0 +1,5 @@
+1 - Leer con jQuery el texto contenido en el h1 y mostrarlo con un alert().
+
+2 - Modificar el texto de todos los vínculos con clase "volver" por un contenido distinto, como por ejemplo: "subir arriba" o "volver al inicio".
+
+3 - Modificar el texto del vínculo inferior del archivo, para que diga algo distinto, por ejemplo: "Nombre de la empresa".

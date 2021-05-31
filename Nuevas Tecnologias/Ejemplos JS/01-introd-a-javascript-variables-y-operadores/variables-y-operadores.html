@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title>Comentarios, variables y operadores</title>
+    </head>
+    
+    <body>
+        <h1>Comentarios, variables y operadores</h1>
+        <hr />
+    	<script type="text/javascript">
+    		/* <![CDATA[ */
+
+			//	COMENTARIOS:
+
+			//	Esto es un comentario de Javascript.
+						
+			//	Los comentarios nos permiten ingresar aclaraciones, recordatorios
+			//	indicaciones o cualquier texto que creamos conveniente para
+			//	documentar mejor el código y ayudarnos a entenderlo posteriormente.
+			//	Son ignorados por el intérprete de Javascript.
+			//	Se utilizan a modo informativo. Nos permiten, por ejemplo,
+			//	entender el código de otro programador que pueda haber dejado notas
+			// 	descriptivas en el documento, o incluso un código que hayamos
+			//	hecho nosotros mismos hace mucho tiempo.
+			
+			//	Los comentarios de una sóla línea comienzan con "//"
+			//	y su contenido debe mostrarse a continuación en la misma línea.
+			
+			//	Si, en cambio, queremos realizar un comentario más largo,
+			//	o de más de una línea, sin tener que poner "//" al inicio
+			//	de cada línea, podemos utilizar los comentarios de varias
+			//	líneas, que comienzan con "/*" y quedan abiertos hasta que
+			//	se cierran con "*/".
+			
+			/*
+				Este es un comentario de varias líneas en Javascript.
+				No se requiere iniciar cada nueva línea con "//".
+				Resultan muy útiles para realizar comentarios largos.
+				Los comentarios multilínea pueden tener cualquier largo.
+			*/
+			
+			/*	Este comentario ocupa una sóla línea, pero podría ocupar varias. */
+			
+
+			// /////////////////////////////////////////////////////////////////// //
+			
+			/*	VARIABLES:
+			
+				Las variables permiten almacenar información en memoria, para su
+				posterior uso. Toda variable tiene un nombre que le asignamos,
+				el cual nos permite luego poder interactuar con ella (es decir,
+				acceder a su contenido o modificarlo).
+				Por ejemplo, si creamos una variable "num1" y guardamos en ella
+				el número 10, y tenemos otra variable, de nombre "num2", y en su
+				interior asignamos el número 15, podríamos crear una tercer
+				variable, por ejemplo, "suma", 	que guarde la suma de las dos
+				variables creadas anteriormente. De este modo, si a "suma" le
+				asignamos el valor "num1 + num2", al consultar el valor de
+				"suma" obtendremos un número 25.
+				
+			*/
+			
+			
+			//	ASIGNACIÓN DE VARIABLES:
+			
+			var deudaInicial = 1000;
+			/*	se declara la variable "deudaInicial"
+				y se le asigna el valor 1000 */
+										
+
+			var pagosRealizados = 750;
+			/*	se declara la variable "pagosRealizados"
+				y se le asigna el valor 750 */
+											
+			var restanPagar = deudaInicial - pagosRealizados;
+			/*	se declara la variable "restanPagar"
+				y se le asigna la resta entre
+				"deudaInicial" y "pagosRealizados" */
+
+			document.write("Restan pagar: ");
+			/*	se escribe en la posición actual del
+				documento HTML el contenido que pasemos
+				entre paréntesis. En este caso, se
+				quiere mostrar texto, por lo que
+				se lo ingresa entre comillas simples o dobles. */
+			
+			document.write(restanPagar);
+			/*	también podemos mostrar el valor
+				de una variable. En este caso, simplemente
+				utilizamos su nombre para acceder a su valor. */
+
+			document.write("<hr />");
+			/*	el texto que imprimamos en el documento,
+				puede ser texto plano, o etiquetas HTML,
+				o una combinación de ambas cosas. */
+
+
+			/*	Las variables también pueden contener texto
+				o cadenas de caracteres, entre otros tipos de datos:
+			*/
+			var saludo = "Hola";
+			var nombre = 'Mundo';
+
+			var mensaje1 = saludo + nombre;
+			/*	cuando se hace una "suma" de dos variables
+				que tienen texto en su contenido, sus textos
+				se concatenan. */
+			
+			document.write(mensaje1);
+			/*	se muestra en pantalla "HolaMundo". Como se ve,
+				las palabras aparecen pegadas, porque los
+				contenidos de las variables no tenían espacios. */
+
+			document.write("<br />");
+
+			var mensaje2 = saludo + " " + nombre;
+			/*	En este caso, se concatena el valor de la variable
+				"saludo" con un espacio y con el contenido de la
+				variable "nombre", y se asigna el resultado,
+				es decir, el texto concatenado, a la variable
+				"mensaje2" */
+
+			document.write(mensaje2);
+			/*	se muestra en pantalla "Hola Mundo". */
+
+			document.write("<br />" + saludo + ", " + nombre);
+			/*	se realiza un salto de línea con la etiqueta <br />
+				de XHTML y se muestra en pantalla "Hola, Mundo". */
+
+			document.write("<hr />");
+		
+			var textoAMostrar;
+			// Se declara la variable "textoAMostrar".
+			
+			var numero;
+			// Se declara la variable "numero", aunque sin contenido.
+			
+			numero = 31;
+			// Se le asigna a la variable "numero" el valor 31.
+		
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero = numero + 2;
+			/* Se le asigna a "numero" su valor anterior + 2.
+				Pasa a valer 33. */
+			
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+			
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero += 7;
+			/* Se le suma 7 al valor actual a numero.
+				Pasa a valer 40. */
+			
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero -= 10;
+			/* Se le resta 10 al valor actual a numero.
+				Pasa a valer 30. */
+			
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero *= 10;
+			/* Se multiplica por 10 el valor actual de numero.
+				Pasa a valer 300. */
+
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+			
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero /= 5;
+			/* Se divide por 5 el valor actual de numero.
+				Pasa a valer 60. */
+			
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+			
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero++;
+			/* Se incrementa en 1 la variable "numero".
+				Pasa a valer 61. */
+			
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo	y el valor actual de la variable
+				"numero" */
+			
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+			
+			numero--;
+			/* Se decrementa en 1 la variable "numero".
+				Pasa a valer 60. */
+
+			textoAMostrar = "Valor actual de la variable <em>numero</em>: " + numero + ".<br />";
+			/* Se asigna a la variable "textoAMostrar" texto
+				descriptivo y el valor actual de la variable
+				"numero" */
+			
+			document.write(textoAMostrar);
+			/* Se escribe en la posición actual el valor de
+				la variable "textoAMostrar". */
+
+
+
+			/* ]]> */
+		</script>
+
+    </body>
+</html>

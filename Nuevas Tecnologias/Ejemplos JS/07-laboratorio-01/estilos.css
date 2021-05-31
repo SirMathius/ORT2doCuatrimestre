@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	background-color: #656F8C;
+}
+
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 13px;
+	width: 940px;
+	margin: 20px auto;
+	border: 5px solid #211426;
+}
+
+h1{
+	margin-bottom: 20px;
+}
+
+h2{
+	margin-bottom: 15px;
+}
+
+h3{
+	margin: 25px 0 10px;
+}
+
+a{
+	color:#8f0222;
+}
+
+a:hover{
+	color: #bf3252;
+}
+
+a:active{
+	color: #000;
+}
+
+#header{
+	height: 120px;
+	background-color: #211426;
+}
+
+#nav{
+	height: 35px;
+	background-color: #514669;
+}
+
+#contenido{
+	background-color: #fff;
+	padding: 20px;
+}
+
+#publicaciones{
+	width: 630px;
+	height: 350px;
+	float: left;
+	padding: 20px 20px 20px 0;
+	overflow: auto;
+}
+
+#publicaciones p{
+	padding: 0 20px 20px;
+	border-bottom: 1px dashed #ddd;
+}
+
+#lateral{
+	width: 230px;
+	margin-left: 20px;
+	height: 390px;
+	background-color: #F2EFDF;
+	float: left;
+}
+
+#footer{
+	height: 150px;
+	background-color: #211426;
+	position: relative;
+}
+
+#empresa{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: #F2EFDF;
+}
+
+#empresa:hover{
+	color: #716689;
+}
+
+#empresa:active{
+	color: #a196b9;
+}
+
+.clear{
+	clear: both!important;
+}
