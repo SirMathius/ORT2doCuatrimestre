@@ -14,6 +14,11 @@ public class Main {
 		System.out.println("Pasaron: "+ prueba.diasTranscurridos(5)+" dias");
 		
 		
+		//Demo String
+		
+		char c = "Hola que tal".toCharArray()[8];
+		System.out.println(c);
+		
 	}
 
 }

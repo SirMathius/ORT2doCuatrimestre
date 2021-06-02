@@ -15,7 +15,7 @@ public class LectorEnteros {
 	}
 	public LectorEnteros(Scanner scanner) {
 		// TODO implementar
-		return 0;
+		;
 	}
 
 	public int pedir(String mensaje) {
