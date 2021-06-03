@@ -1,0 +1,7 @@
+package ar.edu.ort.tp5.ej3;
+
+public enum Mes {
+
+	ENERO, FEBRERO, MARZO, ABRIL, MAYO, JUNIO, JULIO, AGOSTO, SEPTIEMBRE, OCTUBRE, NOVIEMBRE, DICIEMBRE;
+
+}
