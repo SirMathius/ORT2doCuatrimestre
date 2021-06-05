@@ -34,4 +34,12 @@ public class Rubro {
 		
 		return gastosPorMes[mes.ordinal()];
 	}
+	
+	public double getGastoAcumulado() {
+		int gastoAcumulado = 0;
+		for (int i = 0; i < gastosPorMes.length; i++) {
+			gastoAcumulado += gastosPorMes[i];
+		}
+		return gastoAcumulado;
+	}
 }

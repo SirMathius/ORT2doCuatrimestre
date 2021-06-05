@@ -11,7 +11,7 @@ public class Matrices {
 
 		String[][] matrizStrings = { { "Hola", "Chau" }, { "Hello", "Bye" }, { "Shalom", "Shalom2" } };
 
-		Auto[][] matrizAUto = new Auto[3][2];
+		Auto[][] matrizAuto = new Auto[3][2];
 
 		int[][] matrizCargada = { { 1, 2, 3 }, { 4, 5, 6, 12 }, { 7, 8, 9, 15, 54, 87, 366 }, { 10, 11 } };
 
