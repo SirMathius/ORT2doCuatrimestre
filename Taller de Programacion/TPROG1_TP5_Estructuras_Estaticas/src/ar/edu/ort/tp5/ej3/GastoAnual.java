@@ -6,7 +6,7 @@ public class GastoAnual {
 
 	private ArrayList<Rubro> rubros;
 
-	public GastoAnual(ArrayList<Rubro> rubros) {
+	public GastoAnual() {
 
 		this.rubros = new ArrayList<>();
 
@@ -16,6 +16,9 @@ public class GastoAnual {
 
 		if (importe < 0) {
 			throw new RuntimeException("Importe invalido");
+		}else {
+			Rubro rubro = obtenerRubro(nombreRubro);
+			rubro.agregarGasto(mes, importe);
 		}
 
 	}
@@ -77,17 +80,30 @@ public class GastoAnual {
 		double gastoAcumulado = -1;
 
 		Rubro buscado = buscarRubro(rubro);
-		if (rubro != null) {
+		if (buscado != null) {
 			gastoAcumulado = buscado.getGastoAcumulado();
 		}
 
 		return gastoAcumulado;
 
 	}
-	
-	public void informarConsumosPorMes() {
-		
-	}
 
+	public void informarConsumosPorMes() {
+		double[][] matriz = consolidadoDeGastos();
+		Mes[] meses = Mes.values();
+		System.out.printf("%11s", " ");
+		for (Rubro rubro : rubros) {
+			System.out.printf("%10.2s", rubro.getNombre());
+		}
+		System.out.println();
+		for (int fila = 0; fila < matriz.length; fila++) {
+			System.out.printf("%11s", meses[fila].toString());
+			for (int i = 0; i < matriz[i].length; i++) {
+				System.out.printf("%10.2f", matriz[fila][i]);
+			}
+			System.out.println();
+		}
+
+	}
 
 }

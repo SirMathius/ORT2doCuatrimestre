@@ -42,4 +42,5 @@ public class Rubro {
 		}
 		return gastoAcumulado;
 	}
+
 }
