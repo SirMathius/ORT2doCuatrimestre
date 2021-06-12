@@ -1,0 +1,38 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>38</y><w>100</w><h>60</h></coordinates><panel_attributes>Instituto
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>218</y><w>120</w><h>90</h></coordinates><panel_attributes>Alumno
+--
+-legajo: String
+-apellido: String
+-edad: int
+--
++getApellido():String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>218</y><w>260</w><h>280</h></coordinates><panel_attributes>Comicion
+--
+-codigo: int
+-cantAlumnos: int
+-canClases: int
+-asistencias: char[][]
+_-PORC_MIN_ASIS: double = 0,75_
+_-PRESENTE: char = "P"_
+_-TARDE: char = "T"_
+_-AUSENTE: char = "A"_
+--
++Comision(String, int, int)
++mostrarApellidosAptosFinal()
+-porcAsistPorAlumno([char]): double
++cantLlegadasTarde(): int
++cantClasesAsisPerfect():int
+-claseAsisPerfect(int): bolean
++porcentajePresentismoPorClase(): double[]
+-porcentajePresen(int): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>38</y><w>240</w><h>60</h></coordinates><panel_attributes>Matematica
+--
+_+getProcentaje(double, double):double_
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>88</y><w>90</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+-comisiones
+m1=*</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>208</y><w>180</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-alumnos
+m1=*</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>88</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element></diagram>

@@ -93,7 +93,7 @@ public class GastoAnual {
 		Mes[] meses = Mes.values();
 		System.out.printf("%11s", " ");
 		for (Rubro rubro : rubros) {
-			System.out.printf("%10.2s", rubro.getNombre());
+			System.out.printf("%10s", rubro.getNombre());
 		}
 		System.out.println();
 		for (int fila = 0; fila < matriz.length; fila++) {
