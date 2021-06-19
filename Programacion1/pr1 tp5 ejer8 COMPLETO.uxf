@@ -1,0 +1,51 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>46</y><w>310</w><h>90</h></coordinates><panel_attributes>Centro
+--
+_-CANT_COLAS: int= 3_
+--
++obtenerColasPorPrioridadYOrden(): ColaDePersonas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>176</y><w>170</w><h>140</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Vacunable
+--
+_+MIN_PRIORIDAD: int = 2_
+_+MED_PRIORIDAD: int = 1_
+_+MAX_PRIORIDAD: int = 0_
+_+EDAD_MAXIMA: int = 60_
+--
++getPrioridad():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>356</y><w>180</w><h>150</h></coordinates><panel_attributes>Persona
+--
+-dni : String
+-nombre: String
+-edad: int
+-esPacienteRiesgo: boolean
+- ordenLlegada: int
+--
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>586</y><w>100</w><h>100</h></coordinates><panel_attributes>Medico
+--
+-matricula: String
+--
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>586</y><w>110</w><h>100</h></coordinates><panel_attributes>Docente
+--
+
+--
++getPrioridad(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>496</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>496</y><w>230</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>210;10;210;60;10;60;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>306</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>586</y><w>150</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+NivelEducacion
+--
+_+INICIAL_
+_+PRIMARIO_
+_+SECUNDARIO_
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>576</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-nivelEducacion
+m1=1</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>356</y><w>140</w><h>110</h></coordinates><panel_attributes>ColaDePersonas
+--
+
+--
++add(Persona): void
++remove(): Persona
++ isEmpty(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>126</y><w>160</w><h>250</h></coordinates><panel_attributes>lt=&lt;-
+-arrayColasDePersonas
+m1=CANT_COLAS
+</panel_attributes><additional_attributes>10;230;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>46</y><w>220</w><h>100</h></coordinates><panel_attributes>ListaPersonasPorPrioridadYOrden
+--
+
+--
++compare(Persona, Persona): int
++compareByKey(String, Persona): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>46</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>356</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element></diagram>

@@ -1,0 +1,38 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>200</x><y>260</y><w>110</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interfaz&gt;&gt;
+/Vacunable/
+--
+_+MAX: int = 0_
+_+MED: int = 1_
+_+MIN: int = 2_
+--
+/+verPrioridad(): int/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>260</y><w>150</w><h>160</h></coordinates><panel_attributes>Persona
+--
+-dni: int
+-nombre: String
+-edad: int
+-pacienteRiesgo: boolean
+-nroOrden: int
+--
++setNroOrden(int):void
++getNroOrden():int
++verPrioridad(): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>280</w><h>80</h></coordinates><panel_attributes>Centro
+--
+_-CANT_COLAS: int=3 _
+--
++obtenerColaPorPrioridadYOrden(): ColaPersonas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>260</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>130</y><w>100</w><h>50</h></coordinates><panel_attributes>&lt;&lt;Cola&gt;&gt;
+ColaPersonas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>0</x><y>70</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>170</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>70</y><w>60</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+m1=-colas</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>500</y><w>100</w><h>70</h></coordinates><panel_attributes>PersonaSalud
+--
+-matricula: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>370</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>410</y><w>140</w><h>70</h></coordinates><panel_attributes>educacionObligatoria
+--
+-nivel: Nivel
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>370</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>110</y><w>220</w><h>110</h></coordinates><panel_attributes>ListaOrdenadaPorPrioridadYOrden
+--
+
+--
++compare(Persona, Persona): int
++compareByKey():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>210</y><w>160</w><h>70</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;50;10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>70</y><w>110</w><h>70</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>90;50;10;50;10;10</additional_attributes></element></diagram>

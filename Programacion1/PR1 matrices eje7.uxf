@@ -9,7 +9,7 @@
 -edad: int
 --
 +getApellido():String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>218</y><w>260</w><h>280</h></coordinates><panel_attributes>Comicion
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>218</y><w>260</w><h>310</h></coordinates><panel_attributes>Comicion
 --
 -codigo: int
 -cantAlumnos: int
@@ -27,7 +27,9 @@ _-AUSENTE: char = "A"_
 +cantClasesAsisPerfect():int
 -claseAsisPerfect(int): bolean
 +porcentajePresentismoPorClase(): double[]
--porcentajePresen(int): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>38</y><w>240</w><h>60</h></coordinates><panel_attributes>Matematica
+-porcentajePresen(int): double
++mostrarDesertores()
+-esDesertor([char]): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>38</y><w>240</w><h>60</h></coordinates><panel_attributes>Matematica
 --
 _+getProcentaje(double, double):double_
 --
